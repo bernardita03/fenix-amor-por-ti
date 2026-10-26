@@ -1,0 +1,7 @@
+# Solo desarrollo local; copiar a .dev.vars (no subir secretos).
+ADMIN_EMAILS=""
+ACCESS_TEAM_DOMAIN=""
+ACCESS_AUD=""
+# Integración de calendario opcional, sin credenciales recuperadas.
+# GOOGLE_CALENDAR_WEBHOOK_URL=""
+# GOOGLE_CALENDAR_SHARED_SECRET=""
