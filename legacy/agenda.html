@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Reserva tu hora en Fénix Amor por Ti y envía el comprobante de tu abono de forma segura." />
+    <meta name="theme-color" content="#7b2144" />
+    <title>Reservar una hora | Fénix Amor por Ti</title>
+    <link rel="icon" type="image/webp" href="/assets/logo-fenix.webp?v=9" />
+    <link rel="stylesheet" href="/agenda.css" />
+    <script src="/agenda.js" defer></script>
+  </head>
+  <body>
+    <header class="agenda-header">
+      <a class="agenda-brand" href="/" aria-label="Volver a Fénix Amor por Ti">
+        <img src="/assets/logo-fenix.webp" alt="" />
+        <span><strong>Karina Pérez</strong><small>Fénix Amor por Ti</small></span>
+      </a>
+      <a class="back-site" href="/">Volver al sitio <span>↗</span></a>
+    </header>
+
+    <div class="demo-banner" role="status"><strong>Reserva segura</strong><span>El abono es de $5.000, o del valor total si el servicio cuesta menos, y se descuenta del total.</span></div>
+
+    <main class="agenda-shell">
+      <section class="agenda-intro">
+        <p class="eyebrow">Reserva en línea</p>
+        <h1>Elige tu momento para cuidarte.</h1>
+        <p>Selecciona tu servicio, elige un horario disponible y envía el comprobante. La hora se retiene durante 30 minutos mientras completas el abono.</p>
+        <div class="intro-points">
+          <span><b>01</b> Elige el servicio</span>
+          <span><b>02</b> Selecciona día y hora</span>
+          <span><b>03</b> Transfiere el abono</span>
+        </div>
+      </section>
+
+      <section class="booking-card" aria-labelledby="booking-title">
+        <div class="booking-topline">
+          <div><p class="eyebrow">Agenda en línea</p><h2 id="booking-title">Reserva tu hora</h2></div>
+          <span class="secure-note">Reserva y comprobante protegidos</span>
+        </div>
+
+        <ol class="progress" aria-label="Progreso de la reserva">
+          <li class="is-active" data-progress="1"><span>1</span>Servicio</li>
+          <li data-progress="2"><span>2</span>Horario</li>
+          <li data-progress="3"><span>3</span>Tus datos</li>
+          <li data-progress="4"><span>4</span>Transferencia</li>
+        </ol>
+
+        <div class="booking-layout">
+          <div class="step-area">
+            <section class="step-panel is-active" data-step="1">
+              <div class="step-heading"><span>Paso 1 de 4</span><h3>¿Qué servicio necesitas?</h3><p>Elige una categoría y revisa el valor y la duración aproximada.</p></div>
+              <div class="category-tabs" data-categories aria-label="Categorías de servicios"></div>
+              <div class="service-options" data-services></div>
+              <div class="step-actions step-actions-end"><button class="primary-action" type="button" data-next disabled>Elegir horario <span>→</span></button></div>
+            </section>
+
+            <section class="step-panel" data-step="2" hidden>
+              <div class="step-heading"><span>Paso 2 de 4</span><h3>¿Dónde y cuándo?</h3><p>Selecciona la modalidad, el día y una hora disponible.</p></div>
+              <fieldset class="modality-options">
+                <legend>Modalidad de atención</legend>
+                <label><input type="radio" name="modality" value="En salón" checked /><span><b>En salón</b><small>Av. Gabriela Poniente 713</small></span></label>
+                <label><input type="radio" name="modality" value="A domicilio" /><span><b>A domicilio</b><small>Región Metropolitana · adicional $4.000</small></span></label>
+              </fieldset>
+              <div class="picker-block"><h4>Elige el día</h4><div class="date-options" data-dates></div><label class="custom-date">¿Buscas una fecha posterior?<input type="date" data-custom-date /></label></div>
+              <div class="picker-block"><h4>Horarios disponibles</h4><div class="time-options" data-times><p class="empty-hint">Primero selecciona un día.</p></div></div>
+              <div class="step-actions"><button class="secondary-action" type="button" data-back>← Volver</button><button class="primary-action" type="button" data-next disabled>Continuar <span>→</span></button></div>
+            </section>
+
+            <section class="step-panel" data-step="3" hidden>
+              <div class="step-heading"><span>Paso 3 de 4</span><h3>¿A nombre de quién?</h3><p>Estos datos se utilizarán únicamente para gestionar y confirmar tu reserva.</p></div>
+              <form class="client-form" data-client-form>
+                <label>Nombre y apellido<input name="name" autocomplete="name" required placeholder="Ejemplo: Sofía González" /></label>
+                <label>WhatsApp<input name="phone" autocomplete="tel" required placeholder="Ejemplo: +56 9 1234 5678" /></label>
+                <label>Correo electrónico <small>Opcional</small><input name="email" type="email" autocomplete="email" placeholder="sofia@ejemplo.cl" /></label>
+                <label class="consent"><input name="terms" type="checkbox" required /><span>Acepto las condiciones de reserva, cancelación, reprogramación y puntualidad indicadas en esta página.</span></label>
+                <div class="step-actions"><button class="secondary-action" type="button" data-back>← Volver</button><button class="primary-action" type="submit">Retener esta hora <span>→</span></button></div>
+              </form>
+            </section>
+
+            <section class="step-panel transfer-panel" data-step="4" hidden>
+              <div class="success-mark">✓</div>
+              <div class="step-heading"><span>Paso 4 de 4</span><h3>Hora retenida temporalmente</h3><p>Transfiere el abono indicado y adjunta el comprobante antes de que termine el tiempo.</p></div>
+              <div class="countdown-card"><span>Tiempo restante para transferir</span><strong data-countdown>30:00</strong></div>
+              <div class="bank-card">
+                <div><span>Datos de transferencia</span><b>Fénix Amor por Ti</b></div>
+                <dl><div><dt>Titular</dt><dd>Karina del Carmen Pérez Silva</dd></div><div><dt>RUT</dt><dd>13.927.234-K</dd></div><div><dt>Banco</dt><dd>Prepago Tenpo</dd></div><div><dt>Tipo de cuenta</dt><dd>Cuenta vista</dd></div><div><dt>Número</dt><dd>111113927234</dd></div><div><dt>Correo</dt><dd>fenix.amorporti@gmail.com</dd></div><div><dt>Abono</dt><dd data-bank-amount>$5.000</dd></div></dl>
+              </div>
+              <label class="receipt-field">Comprobante de transferencia<input type="file" accept="image/jpeg,image/png,image/webp,application/pdf" data-receipt /><small>Se guardará de forma privada y solo podrá revisarlo la cuenta administrativa autorizada. Máximo 8 MB.</small></label>
+              <button class="primary-action full-action" type="button" data-send-receipt>Enviar comprobante <span>→</span></button>
+              <div class="demo-status" data-demo-status hidden><strong>Comprobante y aviso enviados</strong><p>Tu reserva quedó pendiente de revisión. Karina recibirá el aviso para revisar el comprobante y confirmar la hora.</p></div>
+            </section>
+          </div>
+
+          <aside class="booking-summary" aria-live="polite">
+            <p class="eyebrow">Tu selección</p>
+            <h3>Resumen</h3>
+            <dl>
+              <div><dt>Servicio</dt><dd data-summary-service>Sin seleccionar</dd></div>
+              <div><dt>Modalidad</dt><dd data-summary-modality>En salón</dd></div>
+              <div><dt>Fecha</dt><dd data-summary-date>Sin seleccionar</dd></div>
+              <div><dt>Hora</dt><dd data-summary-time>Sin seleccionar</dd></div>
+              <div><dt>Valor servicio</dt><dd data-summary-price>$0</dd></div>
+              <div data-summary-delivery-row hidden><dt>Adicional domicilio</dt><dd>$4.000</dd></div>
+              <div class="summary-total"><dt>Abono</dt><dd data-summary-deposit>$0</dd></div>
+            </dl>
+            <p class="summary-note">El abono se descuenta del total. La hora se confirma después de validar la transferencia.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="booking-policies" aria-labelledby="policies-title">
+        <p class="eyebrow">Antes de reservar</p>
+        <h2 id="policies-title">Condiciones de la agenda</h2>
+        <div class="policy-grid">
+          <article><h3>Confirmación</h3><p>La reserva se realiza con un abono de $5.000, o el valor total si el servicio cuesta menos. Se descuenta del valor final. Tienes 30 minutos para enviar el comprobante; después de ese plazo la hora puede quedar disponible nuevamente.</p></article>
+          <article><h3>Cancelación y reprogramación</h3><p>Avisa con 24 a 48 horas de anticipación. El abono permite reprogramar la hora una vez.</p></article>
+          <article><h3>Puntualidad</h3><p>El tiempo máximo de espera es de 15 minutos, porque después existen otras horas asignadas.</p></article>
+          <article><h3>Atención</h3><p>Lunes a sábado, de 09:00 a 21:00 horas. No se atienden días festivos. El servicio a domicilio está disponible en la Región Metropolitana con un adicional de $4.000.</p></article>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
