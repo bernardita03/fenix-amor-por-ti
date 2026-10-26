@@ -13,7 +13,7 @@
     {
       "binding": "DB",
       "database_name": "fenix-db",
-      "database_id": "00000000-0000-4000-8000-000000000000",
+      "database_id": "18f3d2b7-2311-495a-a20f-d2fbe2590e79",
       "migrations_dir": "drizzle"
     }
   ],
